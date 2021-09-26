@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=fr>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <header>
+        <Router>
+            <Navbar />
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Card
+              title='Card Title'
+              imageUrl='data:image/jpeg;base64,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'
+              body='Lorem Ipsum'
+              />
+              <Route path='/services' component={Services} />
+              <Route path='/products' component={Products} />
+              <Route path='/contact-us' component={ContactUs} />
+              <Route path='/sign-up' component={SignUp} />
+              <Route path='/marketing' component={Marketing} />
+              <Route path='/consulting' component={Consulting} />
+            </Switch>
+        </Router>
+    </header>
+    <main>
+        <form method="post" action>
+            <label>
+                Nom :
+                <input type="text" name="name" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Nom scientifique :
+                <input type="text" name="scientific" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Habitat :
+                <input type="text" name="habitat" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Taille :
+                <input type="text" name="taille" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Poids :
+                <input type="text" name="poids" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Longévité :
+                <input type="text" name="an" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Régime alimentaire :
+                <input type="text" name="regime" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Gestation :
+                <input type="text" name="gestation" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Population :
+                <input type="text" name="population" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Statut de menace :
+                <input type="text" name="statut" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Principales menaces :
+                <input type="text" name="menace" />
+            </label>
+            <br>
+            <br>
+            <button type="submit" value="envoyer">Envoyer</button>
+          </form>
+    </main>
+  <footer>
+
+  </footer>
+  </body>
+</html>
